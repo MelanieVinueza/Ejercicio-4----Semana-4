@@ -43,6 +43,9 @@ jobs:
       url: ${{ steps.publicar.outputs.page_url }}
 
     steps:
+      - name: Obtener el código
+        uses: actions/checkout@v4
+
       - name: Configurar Pages
         uses: actions/configure-pages@v5
         with:
